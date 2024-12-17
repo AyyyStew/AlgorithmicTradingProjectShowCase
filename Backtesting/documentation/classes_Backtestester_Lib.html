@@ -1,0 +1,78 @@
+<html>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      <div class="mermaid">
+    
+        classDiagram
+          class Asset {
+            balance : int
+            buy_fee : float
+            intial_args : dict
+            qty : int
+            sell_fee : float
+            buy(price, percent_of_balance_to_buy)
+            get_holding_value(price)
+            reinitialize()
+            sell(price, percent_of_holding_to_sell)
+          }
+          class BuyAndHold {
+            bought : bool, bytes
+            generate_transaction(row)
+            setup_dataframe(df) DataFrame
+          }
+          class Holding {
+            ticker
+          }
+          class Strategy {
+            buy_percentage : int
+            sell_percentage : int
+            generate_transaction(row)* Series
+            setup_dataframe(df)* DataFrame
+          }
+          class StrategyTester {
+            holding
+            name : str
+            strategy
+            run_test(name, start_date, end_date, sell_pricing_function, buy_pricing_function, portfolio_value_pricing_function, buy_on_next) Tuple[DataFrame, TestResult]
+          }
+          class TestResult {
+            annualized_return_on_investment
+            data_source : str
+            end_balance : float
+            end_date : datetime
+            name : str
+            net_return
+            num_buys : int
+            num_sells : int
+            num_transactions
+            return_on_investment
+            start_balance : float
+            start_date : datetime
+          }
+          class TestRunner {
+            end_date : datetime
+            pricing_functions : List[tuple[str, Callable, Callable, Callable]]
+            results : dict
+            start_date : datetime
+            strategies : List[tuple[str, Strategy]]
+            test_results : dict
+            ticker
+            get_plot(pricings: List['str'])
+            run_tests(holding: Holding | None)
+            set_date_range(start_date: datetime, end_date: datetime)
+          }
+          class Ticker {
+            dataframe : NoneType, TextFileReader
+            name : str
+            period : Literal
+          }
+          Holding --|> Asset
+          BuyAndHold --|> Strategy
+          Holding --o StrategyTester : holding
+          Strategy --o StrategyTester : strategy
+          Ticker --o Holding : ticker
+          Ticker --o TestRunner : ticker
+  
+       </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      <div class="mermaid">
+    
+        classDiagram
+          class backtester_lib {
+          }
+          class assets {
+          }
+          class asset {
+          }
+          class holding {
+          }
+          class constants {
+          }
+          class setup {
+          }
+          class strategies {
+          }
+          class buy_and_hold {
+          }
+          class constants {
+          }
+          class strategy {
+          }
+          class utils {
+          }
+          class strategy_tester {
+          }
+          class test_runner {
+          }
+          class ticker {
+          }
+          class utils {
+          }
+          holding --> asset
+          buy_and_hold --> constants
+          buy_and_hold --> strategy
+          buy_and_hold --> utils
+          utils --> constants
+          strategy_tester --> holding
+          strategy_tester --> constants
+          strategy_tester --> strategy
+          test_runner --> holding
+          test_runner --> strategy
+          test_runner --> strategy_tester
+          test_runner --> ticker
+          ticker --> constants
+  
+       </div>
+  </body>
+</html>
