@@ -1,25 +1,25 @@
 # Backtester Lib
 
-This is a backtesting library used to rigorously backtest trading strategies within a flexible framework.
+## Overview
 
-Initially inspired by a casual discussion during a Brazilian Jiu-Jitsu class, this project has evolved from a simple script to a robust Python package designed for traders and developers alike.
+Backtester Lib is a Python-based library designed for the rigorous backtesting of trading strategies. It offers a flexible framework that allows for custom strategy implementation, adjustable trading fees, and compatibility with various datasets.
 
 ## Features
 
-- Comprehensive backtesting framework to evaluate trading strategies.
-- Custom strategy definition and testing.
-- Customizable trading fees and dataset compatibility.
-- Efficient retrieval of key metrics from test results.
+- **Robust Backtesting**: Evaluate trading strategies with a comprehensive suite of tools.
+- **Custom Strategy Definition**: Implement and test your own trading strategies.
+- **Adjustable Parameters**: Set trading fees and adapt to different datasets easily.
+- **Performance Metrics**: Efficiently extract key metrics from your backtest results.
 
 ## Technology Stack
 
-- **Programming Language** : Python
-- **Libraries**: Pandas, Numpy, Scipy, Dask, Matplotlib
-- **Tools**: Jupyter Notebook
+- **Python**: Primary programming language.
+- **Libraries**: Utilizes Pandas, Numpy, Scipy, Dask, and Matplotlib for data handling and visualization.
+- **Tools**: Developed and tested within Jupyter Notebooks.
 
 ## Quickstart
 
-Refer to the [HowToUse.ipynb](./HowToUse.ipynb) for detailed instructions. Below is a quick setup to get started:
+To start using Backtester Lib, refer to our detailed guide in [HowToUse.ipynb](./HowToUse.ipynb). Here’s a brief example to set up a backtest:
 
 ```python
 # Example of initializing and running a backtest
@@ -52,51 +52,15 @@ test, test_result = StrategyTester(
 )
 ```
 
-## Future Feature Ideas
+## Planned Enhancements
 
-- **Increase Computational Efficiency**: Optimize algorithms to enhance processing speed and handle larger datasets more efficiently.
-- **Parallelize Tests Natively in the Library**: Implement native support for parallel testing to significantly reduce backtesting time and improve performance on multi-core systems.
-- **Create a Database for Test Histories**: Develop a structured database to store historical test data, including strategies, parameters, and results, enabling better tracking and analysis over time.
-- **Add a Simple GUI**: Introduce a user-friendly graphical interface to make the library accessible to non-programmers and enhance user interaction.
+- **Computational Efficiency**: Further optimize backtesting algorithms for speed and larger data handling.
+- **Parallel Testing**: Integrate native support for parallel testing to shorten backtesting times on multi-core systems.
+- **Historical Database**: Build a database for storing test strategies, parameters, and results to facilitate detailed analysis.
+- **User Interface**: Develop a simple GUI to make the library more accessible to those less familiar with programming.
 
-## History of the project
+## Diagrams
 
-### Origins
+Below is the class diagram of Backtester Lib, showing its structure and relationships between classes.
 
-The idea for Backtester Lib originated from a casual conversation about coding projects during a Brazilian Jiu Jitsu class with my friend Ryan aka [Jawwastar](https://github.com/jawwastar). Intrigued by Jawwastar's initial R script for trading strategy verification, I saw potential for a robust development and decided to join the project.
-
-### The Original R Script and Python Transition
-
-Jawwastar had developed a prototype trading strategy using ChatGPT, but struggled with scaling it. I translated this into Python to verify the strategy’s effectiveness, leveraging my strong Python skills to enhance and expand the initial script.
-
-### Advancing to Python and Jupyter Notebooks
-
-To accommodate Jawwastar’s familiarity with R, I created the [HowToUse.ipynb](./HowToUse.ipynb) notebook, serving as a bridge for him to Python. This notebook initially housed all our strategies and ideas, becoming the foundation of our project’s development.
-
-### Migration to Functions and Frameworks
-
-As our strategies evolved, the need for consistency and reliability became evident. Transitioning from Jupyter notebooks to a functional programming approach, we developed reusable functions that later evolved into a class-based framework, separating strategy development from execution.
-
-### Refinement and Parallel Testing
-
-With the framework in place, we introduced a test runner to handle strategy assessments across various conditions. The test runner, parallelized using Dask, allowed us to efficiently compare different strategies on similar datasets.
-
-### Development Hiatus
-
-Despite successful personal investment returns, the strategies did not meet institutional investment criteria. Following extensive testing and consultations with industry experts, we decided to pause development, reflecting on the project’s scalability and market fit.
-
-## Lessons Learned
-
-Throughout the development of Backtester Lib, we learned the importance of modularization and proactive bug testing, which could have saved significant time. Although there were existing tools available, building our own provided invaluable learning and was incredibly rewarding. We also recognized the value of working solutions over perfection and the importance of clean, iterative design in software development.
-
-## Skills Used
-
-Our project utilized advanced concepts like Object-Oriented Design and Computational Optimization, employing tools such as Python, Jupyter, and various data science libraries. On a personal development level, the project enhanced our abilities in teaching, training, and technical communication, proving to be a comprehensive skill-building endeavor.
-
-## Class Diagram
-
-Generated with [pyreverse](https://pylint.pycqa.org/en/latest/additional_tools/pyreverse/index.html)
-
-### Class Diagram
-
-<img src="./documentation/images/class_diagram.png">
+![Class Diagram](./documentation/images/class_diagram.png)
