@@ -12,6 +12,8 @@ The project kicked off with Ryan's R script for trading strategy verification. I
 - **Development of backtester_lib**: We created `backtester_lib`, a Python library that allowed us to test and execute strategies efficiently.
 - **Bot Deployment and Results**: We launched our trading bot on a Linux VPS, automated with cron, achieving a 43% return on investment from October 2023 to September 2024.
 
+![A graph of trading results](./BotResults.png)
+
 ### Technical Milestones
 
 - **Mixed Development Environments**: Ryan worked on strategies with paper and R, while I focused on Python for extensive backtesting.
